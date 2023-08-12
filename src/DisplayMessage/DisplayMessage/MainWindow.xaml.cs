@@ -21,11 +21,9 @@ namespace DisplayMessage
 
             if (args.Length > 1)
             {
-                string message;
-
                 if (int.TryParse(args[1], out var seconds))
                 {
-                    message = string.Join("\r\n\r\n", args.Skip(2));
+                    this.TextBox1.Text = string.Join("\r\n\r\n", args.Skip(2));
 
                     Task.Delay(TimeSpan.FromSeconds(seconds))
                         .ContinueWith(
@@ -40,10 +38,8 @@ namespace DisplayMessage
                 }
                 else
                 {
-                    message = string.Join("\r\n\r\n", args.Skip(1));
+                    this.TextBox1.Text = string.Join("\r\n\r\n", args.Skip(1));
                 }
-
-                this.TextBox1.Text = message;
             }
             else
             {
