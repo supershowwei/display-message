@@ -10,9 +10,13 @@ namespace DisplayMessage
     /// </summary>
     public partial class MainWindow : Window
     {
+        private readonly string title;
+
         public MainWindow()
         {
             this.InitializeComponent();
+
+            this.title = this.Title;
         }
 
         private void OnMainWindowLoaded(object sender, RoutedEventArgs e)
@@ -21,6 +25,8 @@ namespace DisplayMessage
 
             if (args.Length > 1)
             {
+                this.Title = $"{this.title} {DateTime.Now:HH:mm}";
+
                 if (int.TryParse(args[1], out var seconds))
                 {
                     this.TextBox1.Text = string.Join("\r\n\r\n", args.Skip(2));
