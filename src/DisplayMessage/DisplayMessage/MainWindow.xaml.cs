@@ -21,6 +21,10 @@ namespace DisplayMessage
 
         private void OnMainWindowLoaded(object sender, RoutedEventArgs e)
         {
+            var workingArea = SystemParameters.WorkArea;
+            this.Left = workingArea.Right - this.Width;
+            this.Top = workingArea.Bottom - this.Height;
+
             var args = Environment.GetCommandLineArgs();
 
             if (args.Length > 1)
