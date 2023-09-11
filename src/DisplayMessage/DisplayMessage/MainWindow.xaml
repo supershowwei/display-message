@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DisplayMessage"
         mc:Ignorable="d"
-        Title="提醒" Width="320" Height="240" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Topmost="True" Loaded="OnMainWindowLoaded" Icon="/3993856_alert_bell_notice_notifications_notify_icon.png">
+        Title="提醒" Width="320" Height="240" ResizeMode="NoResize" Topmost="True" Loaded="OnMainWindowLoaded" Icon="/3993856_alert_bell_notice_notifications_notify_icon.png">
     <Grid>
         <DockPanel LastChildFill="True">
             <TextBox x:Name="TextBox1" TextWrapping="Wrap" Text="MESSAGE" HorizontalAlignment="Center" VerticalAlignment="Center" AcceptsReturn="True" IsReadOnly="True" FontSize="36" BorderThickness="0" />

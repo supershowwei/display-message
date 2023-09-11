@@ -16,15 +16,14 @@ namespace DisplayMessage
         {
             this.InitializeComponent();
 
+            this.Left = SystemParameters.WorkArea.Right - this.Width;
+            this.Top = SystemParameters.WorkArea.Bottom - this.Height;
+
             this.title = this.Title;
         }
 
         private void OnMainWindowLoaded(object sender, RoutedEventArgs e)
         {
-            var workingArea = SystemParameters.WorkArea;
-            this.Left = workingArea.Right - this.Width;
-            this.Top = workingArea.Bottom - this.Height;
-
             var args = Environment.GetCommandLineArgs();
 
             if (args.Length > 1)
